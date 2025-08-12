@@ -35,7 +35,8 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+        mavenCentral()
+        maven { url 'https://repository.jboss.org/nexus/content/groups/public/' }
 }
 
 dependencies {
