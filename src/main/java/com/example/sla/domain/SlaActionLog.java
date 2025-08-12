@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

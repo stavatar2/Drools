@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.service;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -13,6 +13,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.sla.domain.SlaActionLog;
+import com.example.sla.domain.SlaInstance;
+import com.example.sla.events.TaskEvent;
+import com.example.sla.metrics.SlaMetrics;
+import com.example.sla.repository.SlaActionLogRepository;
+import com.example.sla.repository.SlaInstanceRepository;
 @Service
 @RequiredArgsConstructor
 public class SlaService {

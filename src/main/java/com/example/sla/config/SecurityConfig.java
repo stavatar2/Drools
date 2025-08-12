@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

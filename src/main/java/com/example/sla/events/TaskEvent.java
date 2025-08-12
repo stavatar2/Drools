@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.events;
 
 import java.time.Instant;
 import lombok.Data;

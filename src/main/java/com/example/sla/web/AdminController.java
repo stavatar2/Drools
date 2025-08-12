@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.web;
 
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.sla.domain.SlaInstance;
+import com.example.sla.repository.SlaInstanceRepository;
 
 @RestController
 @RequestMapping("/admin")

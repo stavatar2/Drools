@@ -22,6 +22,9 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
+import com.example.sla.events.TaskEvent;
+import com.example.sla.service.SlaService;
+
 @Testcontainers
 @SpringBootTest
 class SlaEngineMiniApplicationTests {

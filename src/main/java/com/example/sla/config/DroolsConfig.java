@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.config;
 
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;

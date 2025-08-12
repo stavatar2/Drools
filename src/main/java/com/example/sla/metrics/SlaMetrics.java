@@ -1,4 +1,4 @@
-package com.example.sla;
+package com.example.sla.metrics;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.DistributionSummary;
@@ -7,6 +7,8 @@ import io.micrometer.core.instrument.MeterRegistry;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import com.example.sla.repository.SlaInstanceRepository;
 
 @Component
 @RequiredArgsConstructor
