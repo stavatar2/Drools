@@ -1,0 +1,20 @@
+package com.example.sla.rules
+
+import com.example.sla.SlaInstance;
+import com.example.sla.TaskEvent;
+
+rule "P1 first response escalation"
+when
+    $sla : SlaInstance(priority == "P1", status == "OPEN", firstResponseAt == null, java.time.Instant.now().isAfter(firstResponseDeadline))
+then
+    $sla.setStatus("ESCALATED");
+end
+
+rule "Stop on first response"
+when
+    $sla : SlaInstance(firstResponseAt == null, status == "OPEN")
+    TaskEvent(eventType == "comment.added", authorType == "USER", taskId == $sla.taskId, $ts : timestamp)
+then
+    $sla.setFirstResponseAt($ts);
+    $sla.setStatus("MET");
+end
